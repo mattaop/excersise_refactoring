@@ -8,19 +8,34 @@ namespace RefactoringSample1
 	{
 		private string _name;
 		private List<Rental> _rentals = new List<Rental>();
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="name">string name of customer</param>
 		public Customer(string name)
 		{
 			_name = name;
 		}
+		/// <summary>
+		/// Add rental-objects to customer in _rentals list
+		/// </summary>
+		/// <param name="rent">Rental new rental-object</param>		
 		public void AddRental(Rental rent)
 		{
 			_rentals.Add(rent);
 		}
+		/// <summary>
+		/// Get name of customer
+		/// </summary>
+		/// <returns>string name of customer</returns>
 		public string GetName()
 		{
 			return _name;
 		}
-
+		/// <summary>
+		/// Get total charge of all rentals
+		/// </summary>
+		/// <returns>double sum of rentals charges </returns>
 		public double GetTotalCharge()
 		{
 			double result = 0;
@@ -32,7 +47,10 @@ namespace RefactoringSample1
 
 			return result;
 		}
-
+		/// <summary>
+		/// Get total frequent points of all rentals
+		/// </summary>
+		/// <returns>int sum of all frequent points</returns>
 		public int GetFrequentPoints()
 		{
 			int result = 0;
