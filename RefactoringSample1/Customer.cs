@@ -17,7 +17,7 @@ namespace RefactoringSample1
 			_name = name;
 		}
 		/// <summary>
-		/// Add rental-objects to customer in _rentals list
+		/// Add rental-objects to list of _rentals belonging to the customer
 		/// </summary>
 		/// <param name="rent">Rental new rental-object</param>		
 		public void AddRental(Rental rent)

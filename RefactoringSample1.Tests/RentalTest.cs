@@ -6,6 +6,9 @@ namespace RefactoringSample1.Tests
 {
     public class RentalTest
     {
+        /// <summary>
+        /// List of movies that can be added to a customer
+        /// </summary>
         private static List<Movie> _movies = new List<Movie>
             {
                 new Movie("The Lion King", Movie.CHILDRENS),
@@ -14,7 +17,11 @@ namespace RefactoringSample1.Tests
                 new Movie("Parasite", Movie.INTERNATIONAL)
             };
 
-
+        /// <summary>
+        /// Test that the Rental class gets the correct earned frequent points of the rental
+        /// </summary>
+        /// <param name="rental">Rental object of which the frequent points are calculated</param>
+        /// <param name="points">The correct output for comparison</param>
         [Theory]
         [MemberData(nameof(FrequentPointsTestData))]
         public void GetFrequentPoints(Rental rental, int points)
@@ -22,6 +29,11 @@ namespace RefactoringSample1.Tests
             Assert.Equal(Rental.GetFrequentPoints(rental), points);
         }
 
+        /// <summary>
+        /// Test that the Rental class gets the correct charge of the rental
+        /// </summary>
+        /// <param name="rental">Rental object of which the charge is calulated</param>
+        /// <param name="charge">The correct output for comparison</param>
         [Theory]
         [MemberData(nameof(GetChargeRentalTestData))]
         public void GetCharge(Rental rental, double charge)
@@ -29,6 +41,10 @@ namespace RefactoringSample1.Tests
             Assert.Equal(Rental.GetCharge(rental), charge);
         }
 
+        /// <summary>
+        /// Test data with input and output to GetFrequentPoints test function
+        /// </summary>
+        /// <returns>TheoryData object with rental, int</returns>
         public static TheoryData<Rental, int> FrequentPointsTestData()
         {
             return new TheoryData<Rental, int>
@@ -47,6 +63,10 @@ namespace RefactoringSample1.Tests
             };
         }
 
+        /// <summary>
+        /// Test data with input and output to GetChargeRental test function
+        /// </summary>
+        /// <returns>TheoryData object with rental, double</returns>
         public static TheoryData<Rental, double> GetChargeRentalTestData()
         {
             return new TheoryData<Rental, double>
