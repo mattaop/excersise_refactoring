@@ -10,7 +10,8 @@ namespace RefactoringSample1.Prices
         /// Get the price code
         /// </summary>
         /// <returns>int price code</returns>
-        abstract public int GetPriceCode();
+        // abstract public int GetPriceCode();
+
         /// <summary>
         /// Get the charge of the price code given the number of days rented
         /// </summary>

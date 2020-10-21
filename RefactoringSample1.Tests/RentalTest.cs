@@ -14,6 +14,7 @@ namespace RefactoringSample1.Tests
                 new Movie("Parasite", Movie.INTERNATIONAL)
             };
 
+
         [Theory]
         [MemberData(nameof(FrequentPointsTestData))]
         public void GetFrequentPoints(Rental rental, int points)

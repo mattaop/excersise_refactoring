@@ -63,6 +63,10 @@ namespace RefactoringSample1
 			return result;
 		}
 
+		/// <summary>
+		/// Get a string statement explaining the amount owed and the frequent points earned for the rental
+		/// </summary>
+		/// <returns>string statement with charge and frequent points</returns>
 		public string Statement()
 		{
 			var result = $"Rental Record for {GetName()}\n";
@@ -79,6 +83,10 @@ namespace RefactoringSample1
 			return result;
 		}
 
+		/// <summary>
+		/// Get a HTML statement explaining the amount owed and the frequent points earned for the rental
+		/// </summary>
+		/// <returns>HTML statement with charge and frequent points</returns>
 		public string HtmlStatement()
 		{
 			var result = $"<h1>Rental Record for {GetName()}</h1>";

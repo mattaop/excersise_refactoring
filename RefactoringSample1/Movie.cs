@@ -42,10 +42,11 @@ namespace RefactoringSample1
 		/// Is not used at the moment
 		/// </summary>
 		/// <returns>int price code</returns>
-		public int GetPriceCode()
-		{
-			return _price.GetPriceCode();
-		}
+		//public int GetPriceCode()
+		//{
+		//	return _price.GetPriceCode();
+		//}
+
 		/// <summary>
 		/// Get charge from the corresponding price object, stored in _price
 		/// </summary>
